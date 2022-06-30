@@ -1,0 +1,64 @@
+:root {
+  --primary-white: #fff;
+  --primary-orange: #f9ab00;
+  --primary-dark: rgba(255, 255, 255, 0);
+  --primary-red: #ef4035;
+  --primary-hover-red: #f33501;
+	--gray: gray;
+}
+
+.services{
+  position: relative;
+  background: url(../../portfolio-background.jpg) no-repeat;
+  background-size: cover;
+	padding: 0 3rem 0 3rem;
+	display: flex;
+	height: 90vh;
+	align-items: center;
+	justify-content:space-around;
+}
+
+.awesome{
+	display: flex;
+	flex-direction: column;
+	color: white;
+	position: relative;
+}
+.awesome > :nth-child(1){
+	color: var(--primary-red);
+	font-size: 2.5rem;
+	font-weight: bold;
+}
+.awesome > :nth-child(2){
+	color: var(--primary-orange);
+	font-size: 2.5rem;
+	font-weight: bold;
+}
+.awesome > :nth-child(4){
+	color: var(--gray);
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+.cards{
+	color: white;
+}
+
+
+.btn-main-offer{
+  text-decoration: none;
+  border: 1px solid var(--primary-red);
+	background-color: #01f3db;
+  text-transform: uppercase;
+  border-radius: 0;
+  padding: 0.625rem 0.75rem 0.75rem 0.75rem;
+  color: black;
+  margin: 2rem;
+	width: 10rem;
+}
+
+.btn-main-offer:hover{
+  text-decoration: none;
+  background-color: var(--primary-hover-red);
+  color: var(--primary-white);
+  transition: .2s ease-in-out;
+}

@@ -3,7 +3,9 @@
 :root {
   --primary-white: #fff;
   --primary-orange: #f9ab00;
-  --primary-dark: rgba(255, 255, 255, 0)
+  --primary-dark: rgba(255, 255, 255, 0);
+  --primary-red: #ef4035;
+  --primary-hover-red: #f33501;
 }
 
 /********************** NAVBAR *************************/
@@ -12,7 +14,7 @@
 }
 
 body{
-  font-family: 'Roboto Condesed' sans-serif;
+  font-family: 'Roboto Condesed', sans-serif;
 }
 
 /*************************MENU LINKS****************************/
@@ -41,6 +43,12 @@ nav ul li{
   align-items: center;
 }
 
+@media(max-width: 768px){
+  .navbar-brand{
+    width: 7rem;
+  }
+}
+
 .navbar-nav > li > a.active, .navbar-nav > li > a:focus {
   border-top: 0.1875rem solid var(--primary-orange) !important; 
 }
@@ -49,4 +57,87 @@ nav ul li{
   border-top: 0.1875rem solid var(--primary-orange);
 }
 
+/********************** HEADER *************************/
 
+.header-wrap {
+  position: relative;
+  background: url(portfolio-background.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-info{
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Roboto Condesed', sans-serif;
+  z-index: 1;
+}
+
+.main-info h1{
+  color: var(--primary-orange);
+  text-transform: uppercase;
+  font-size: 3rem;
+  -webkit-text-stroke: 0.3px white;
+}
+
+
+
+/********************** TYPED TEXT *************************/
+.typed-text{
+  font-size: 3rem;
+  color: var(--primary-white);
+  -webkit-text-stroke: 2px black;
+}
+
+@media(max-width: 768px){
+  .main-info h1{
+    font-size: 1.7rem !important;
+  }
+  .typed-text{
+    font-size: 1.3rem !important;
+  }
+}
+
+/********************** HEADER MAIN OFFER BUTTON *************************/
+.btn-main-offer{
+  text-decoration: none;
+  border: 1px solid var(--primary-red);
+  text-transform: uppercase;
+  border-radius: 0;
+  padding: 0.625rem 0.75rem 0.75rem 0.75rem;
+  color: var(--primary-white);
+  margin: 2rem;
+}
+
+.btn-main-offer:hover{
+  text-decoration: none;
+  background-color: var(--primary-hover-red);
+  color: var(--primary-white);
+  transition: .2s ease-in-out;
+}
+
+/********************** PARTICLES JS *************************/
+.tsparticles{
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+}
+
+@media(max-width: 768px){
+  .particles-canvas{
+    display: none;
+  }
+}
